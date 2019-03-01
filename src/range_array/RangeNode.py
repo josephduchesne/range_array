@@ -56,13 +56,14 @@ def parse_sensor_data(line):
     for i in range(0,8):
         # Emit the range data for this range
         rmsg = Range()
-        rmsg.header = msg.header
+        rmsg.header.frame_id = "base_link"
+        rmsg.header.stamp = rospy.Time.now()
         rmsg.header.frame_id = "rangefinder_%d" % i
-        rmsg.min_range = msg.range_min  # why...
-        rmsg.max_range = msg.range_max
-        rmsg.field_of_view = msg.angle_increment
+        rmsg.min_range = 0.1
+        rmsg.max_range = 4.0
+        rmsg.field_of_view = 26.0/180.0*3.141592
         rmsg.radiation_type = rmsg.INFRARED
-        rmsg.range = msg.ranges[i]
+        rmsg.range = ranges[i]
         range_pub[i].publish(rmsg)
 
         # output the TF2 for this range
