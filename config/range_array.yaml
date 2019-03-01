@@ -1,0 +1,29 @@
+range_array:
+  serial_port: "/dev/ttyUSB0"
+  tf: "/base_link"
+  spread: 29  # degrees
+  array:
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
+    - position: []  # xyz
+      pitch: 0
+      yaw: 0
